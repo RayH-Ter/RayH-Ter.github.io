@@ -1,7 +1,7 @@
 # RayH-Ter.github.io
 Personal website for something interesting
 
-## Create my own homepage based on Github Page and Jekyll
+## Create your own homepage based on Github Page and Jekyll
 
 1. create a new repo named yourGithubName.github.io
 2. create a index.html and start edit this file to make you homepage look pretty
