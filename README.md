@@ -14,3 +14,7 @@ If you want to edit files offline and get the scene freshed as soon as possible,
 1. install the dependencies for Jekyll on Ubuntu, refer [Jekyll on Ubuntu](https://jekyllrb.com/docs/installation/ubuntu)
 2. run `jekyll server`
 
+## Other reference
+
+
+
