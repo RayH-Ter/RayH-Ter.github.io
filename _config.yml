@@ -13,11 +13,11 @@ highlighter: rouge
 title : Soot Spirits
 tagline: Code, Science, Philosophy, Humor
 author :
-  name : Abhishek Nagekar
-  email : abhishek@nagekar.com
-  github : abhn
-  twitter : abhisheknagekar
-  feedburner : AbhishekN
+  name : Raymond Ho
+  email : 2963165392@qq.com
+  github : RayH-Ter
+  # twitter : abhisheknagekar
+  # feedburner : AbhishekN
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
