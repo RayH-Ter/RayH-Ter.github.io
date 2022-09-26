@@ -12,10 +12,20 @@ Personal website for something interesting
 
 If you want to edit files offline and get the scene freshed as soon as possible, you are supposed to install Jekyll.
 
-1. install the dependencies for Jekyll on Ubuntu, refer [Jekyll on Ubuntu](https://jekyllrb.com/docs/installation/ubuntu)
-2. run `jekyll server`
+1. Install the dependencies for Jekyll on Ubuntu, refer [Jekyll on Ubuntu](https://jekyllrb.com/docs/installation/ubuntu)
+2. Run `jekyll server`
+```bash
+jekyll server
+" 如果报错则运行
+bundle install
+bundle exec jekyll serve
+```
 
 ## Other reference
 
-
+> [Jekyll on Ubuntu](http://jekyllrb.com/docs/installation/ubuntu/)
+>
+> [个人主页 — github + jekyll](https://blog.csdn.net/pentiumCM/article/details/106004574)
+>
+> [启动jekyll服务报错：Could not find gem 'github-pages')](https://dovesandy.github.io/2020/03/12/jekyll-start-jekyll-error/#1-前期准备)
 
