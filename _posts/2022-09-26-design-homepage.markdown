@@ -27,5 +27,5 @@ bundle exec jekyll serve
 >
 > [个人主页 — github + jekyll](https://blog.csdn.net/pentiumCM/article/details/106004574)
 >
-> [启动jekyll服务报错：Could not find gem 'github-pages')](https://dovesandy.github.io/2020/03/12/jekyll-start-jekyll-error/#1-前期准备)
+> [启动jekyll服务报错：Could not find gem 'github-pages'](https://dovesandy.github.io/2020/03/12/jekyll-start-jekyll-error/#1-前期准备)
 
