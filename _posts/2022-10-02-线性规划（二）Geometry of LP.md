@@ -129,7 +129,7 @@
    $$
    同时记矩阵$\bold{A}$的前$p$列为$\bar{\bold{A}}$，然后有$\bold{A}\bold{x}=\bar{\bold{A}}\bar{\bold{x}}=\bold{b}$。
 
-   <img src="../assets/images/LP/2_1.png" alt="2_1" style="zoom: 50%;" /><img src="../assets/images/LP/2_2.png" alt="2_2" style="zoom: 45%;" />
+   <img src="{{ site.baseurl }}/assets/images/LP/2_1.png" alt="2_1" style="zoom: 50%;" /><img src="{{ site.baseurl }}/assets/images/LP/2_2.png" alt="2_2" style="zoom: 45%;" />
 
    注：$\bold{A}_{m\times n},\ m\le n$若行满秩，并不意味着从$\bold{A}$任意选出的$m$列是线性无关的。
 
