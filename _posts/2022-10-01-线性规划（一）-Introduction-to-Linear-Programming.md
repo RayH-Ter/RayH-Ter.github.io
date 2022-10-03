@@ -1,3 +1,14 @@
+---
+title: Introduction to LP
+date: 2022-10-01
+category:
+- Linear Programming
+tags:
+- Math
+- Linear Programming
+- Introduction
+---
+
 ## Introduction to LP
 
 <p align="right">——线性规划好，方老师好</p>

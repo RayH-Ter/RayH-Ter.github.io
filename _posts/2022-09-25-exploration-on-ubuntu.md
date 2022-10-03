@@ -1,3 +1,14 @@
+---
+title: Exploration on Ubuntu
+date: 2022-09-25
+category:
+- Utils
+tags:
+- Linux
+- Ubuntu
+- Basis
+---
+
 ## Basic Operations For A New Ubuntu System
 
 ### Preliminary

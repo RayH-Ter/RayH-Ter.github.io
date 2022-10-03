@@ -1,3 +1,13 @@
+---
+title: Geometry of LP
+date: 2022-10-02
+category:
+- Linear Programming
+tags:
+- Math
+- Linear Programming
+- Geometry
+---
 ## Geometry of LP
 
 你认为一个标准线性规划的问题，解的可能情况有几种？
