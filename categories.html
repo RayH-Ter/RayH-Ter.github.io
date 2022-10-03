@@ -1,0 +1,19 @@
+---
+layout: page
+title : Categories
+header : Post Categories
+group: navigation
+---
+{% include JB/setup %}
+<ul class="tag_box inline">
+    {% assign posts_collate = site.posts %}
+    {% include JB/categories_list %}
+</ul>
+
+{% for category in site.categories %} 
+  <h2 class="nice-title" id="{{ category[0] }}-ref">{{ category[0] }}</h2>
+  <ul>
+    {% assign pages_list = category[1] %}  
+    {% include JB/pages_list %}
+  </ul>
+{% endfor %}
