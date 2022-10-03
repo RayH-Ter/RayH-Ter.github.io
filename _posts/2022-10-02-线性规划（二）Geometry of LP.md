@@ -1,3 +1,15 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 # Geometry of LP
 
 你认为一个标准线性规划的问题，解的可能情况有几种？
@@ -117,7 +129,7 @@
    $$
    同时记矩阵$\bold{A}$的前$p$列为$\bar{\bold{A}}$，然后有$\bold{A}\bold{x}=\bar{\bold{A}}\bar{\bold{x}}=\bold{b}$。
 
-   <img src="../assets/images/LP/2_1.png" alt="image-20221002181514881" style="zoom: 50%;" /><img src="../assets/images/LP/2_2.png" alt="image-20221002181525403" style="zoom: 45%;" />
+   <img src="../assets/images/LP/2_1.png" alt="2_1" style="zoom: 50%;" /><img src="../assets/images/LP/2_2.png" alt="2_2" style="zoom: 45%;" />
 
    注：$\bold{A}_{m\times n},\ m\le n$若行满秩，并不意味着从$\bold{A}$任意选出的$m$列是线性无关的。
 
