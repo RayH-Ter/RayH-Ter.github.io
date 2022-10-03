@@ -29,3 +29,8 @@ bundle exec jekyll serve
 >
 > [启动jekyll服务报错：Could not find gem 'github-pages'](https://dovesandy.github.io/2020/03/12/jekyll-start-jekyll-error/#1-前期准备)
 
+### Advice
+
+1. 在撰写具有大量公式的博客时，需注意公式的规范性，github上markdown行内公式容错性较Typora markdown低，且应搭载mathjax。
+2. 调整博客文章主题可以套用平时Typora中.css文件
+
