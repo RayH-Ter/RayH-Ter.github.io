@@ -1,4 +1,4 @@
-# Geometry of LP
+## Geometry of LP
 
 你认为一个标准线性规划的问题，解的可能情况有几种？
 
@@ -6,9 +6,9 @@
 2. 有最小值
 3. 负无穷
 
-## Terminologies
+### Terminologies
 
-——几何直觉，代数证明
+<p align="right">——几何直觉，代数证明</p>
 
 1. 有界的可行域有界（可行域内的可行解的2范数存在上界）=> 线性规划有界（可行域内取到的目标函数的值恒大于某一常数），反之不一定成立
 
@@ -22,10 +22,10 @@
 
    超平面法线朝向正半空间（简单证明：任一从超平面指向负半平面的向量与法向量的向量积小于0，即与法线向量所呈角大于90°）。
 
-   $$ H_L = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} \ge \beta \right\} $$ lower halfspace, close halfspace
-   $$ H_U = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} \le \beta \right\} $$ upper halfspace, close halfspace
-   $$ H_L^i = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} < \beta \right\} $$ lower halfspace, open halfspace
-   $$ H_U^i = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} > \beta \right\} $$ upper halfspace, open halfspace
+   1. $$ H_L = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} \ge \beta \right\} $$ lower halfspace, close halfspace
+   2. $$ H_U = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} \le \beta \right\} $$ upper halfspace, close halfspace
+   3. $$ H_L^i = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} < \beta \right\} $$ lower halfspace, open halfspace
+   4. $$ H_U^i = \left\{ \mathbf{x}\in R^n \mid \mathbf{a}^T \mathbf{x} > \beta \right\} $$ upper halfspace, open halfspace
 
 3. 有限个闭半空间的交集称为**多面集合（polyhedral set or polyhedron）**，如果有界则称为**多面体（polytope）**。超平面也是一个多面体（由它的两个闭半空间交集得到）。
 
@@ -43,9 +43,9 @@
 
 5. 至此，几何意义基本明确，但对于高维问题，难以通过几何图像来求解。由此引出单纯形法（Simplex method）。但目前我们之前只是intuition，没有convincing的代数证明。
 
-## Background knowledge
+### Background knowledge
 
-——轿夫与坐轿子的人，无限列车
+<p align="right">——轿夫与坐轿子的人，无限列车</p>
 
 1. **线性组合**、**仿射组合**、**锥组合**、**凸组合**
    
@@ -53,18 +53,18 @@
    \mathbf{x} = \sum_{i=1}^{p}\lambda_i \mathbf{x}_i
    $$
 
-   * 线性组合：$\lambda_1,\dots,\lambda_p\in R$ 二维下为全平面 
-   * 仿射组合：$\lambda_1,\dots,\lambda_p\in R$，$\sum_{i=1}^{p}\lambda_i = 1$ 二维下为直线 
-   * 锥组合：$\lambda_1,\dots,\lambda_p\in R$，$\lambda_i\ge0$ 二维下为第一象限+正坐标轴
-   * 凸组合：$\lambda_1,\dots,\lambda_p\in R$，$\sum_{i=1}^{p}\lambda_i = 1,\ \lambda_i\ge0$ 二维下为线段
+   1. 线性组合：$\lambda_1,\dots,\lambda_p\in R$ 二维下为全平面 
+   2. 仿射组合：$\lambda_1,\dots,\lambda_p\in R$，$\sum_{i=1}^{p}\lambda_i = 1$ 二维下为直线 
+   3. 锥组合：$\lambda_1,\dots,\lambda_p\in R$，$\lambda_i\ge0$ 二维下为第一象限+正坐标轴
+   4. 凸组合：$\lambda_1,\dots,\lambda_p\in R$，$\sum_{i=1}^{p}\lambda_i = 1,\ \lambda_i\ge0$ 二维下为线段
 
    可推知：凸组合是仿射组合，反之不成立（除非$\mathbf{x}_i$均相等）；锥和线的交集是线段。
 
 2. **仿射集**、**锥集**、**凸集**
 
-   * 对于集合S，若对于S内任意两点的仿射组合都在S内，则S是一个仿射集
-   * 对于集合S，若对于S内任意两点的锥组合组合都在S内，则S是一个锥集
-   * 对于集合S，若对于S内任意两点的凸组合都在S内，则S是一个凸集
+   1. 对于集合S，若对于S内任意两点的仿射组合都在S内，则S是一个仿射集
+   2. 对于集合S，若对于S内任意两点的锥组合组合都在S内，则S是一个锥集
+   3. 对于集合S，若对于S内任意两点的凸组合都在S内，则S是一个凸集
 
    可推知：一个仿射集一定是凸集，反之不成立。一个锥集一定是凸集，反之不成立.
 
@@ -105,9 +105,9 @@
 
    Let $P$ be a convex polyhedron and $H$ be a supporting hyperplane of $P$, then $F = P\cap H$ defines a face of $P$.
 
-   * dim($F$) = 0, it is a vertex
-   * dim($F$) = 1, it is an edge
-   * dim($F$) = dim($P$) - 1, a facet
+   1. dim($F$) = 0, it is a vertex
+   2. dim($F$) = 1, it is an edge
+   3. dim($F$) = dim($P$) - 1, a facet
 
    **有定理：**Let $P$ be a convex polyhedron, $x \in P$ is a vertex if and only if $x$ is an extreme point of $P$.
 
@@ -138,7 +138,8 @@
    $$
    同时记矩阵$\mathbf{A}$的前$p$列为$\bar{\mathbf{A}}$，然后有$\mathbf{A}\mathbf{x}=\bar{\mathbf{A}}\bar{\mathbf{x}}=\mathbf{b}$。
 
-   <img src="{{ site.baseurl }}/assets/images/LP/2_1.png" alt="2_1" style="zoom: 50%;" /><img src="{{ site.baseurl }}/assets/images/LP/2_2.png" alt="2_2" style="zoom: 45%;" />
+   <center><img src="{{ site.baseurl }}/assets/images/LP/2_1.png" alt="2_1" style="zoom: 65%;" />
+   <img src="{{ site.baseurl }}/assets/images/LP/2_2.png" alt="2_2" style="zoom: 55%;" /></center>
 
    注：$\mathbf{A}_{m\times n},\ m\le n$若行满秩，并不意味着从$\mathbf{A}$任意选出的$m$列是线性无关的。
 

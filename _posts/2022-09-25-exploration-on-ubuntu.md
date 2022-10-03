@@ -1,6 +1,6 @@
-# Basic Operations for Starting Using a New Ubuntu System
+## Basic Operations For A New Ubuntu System
 
-## Preliminary
+### Preliminary
 
 **安装与卸载**
 
@@ -34,7 +34,7 @@ su
 
 * `chown`命令，详见[wuling129](https://www.cnblogs.com/wuling129/p/4648760.html)
 
-## Git 操作
+### Git 操作
 
 **设置用户信息**
 
@@ -64,6 +64,6 @@ su
 
 **安装插件**
 
-## Jekyll + Github
+### Jekyll + Github
 
 参考[Design Homepage](https://rayh-ter.github.io/2022/09/26/design-homepage)
