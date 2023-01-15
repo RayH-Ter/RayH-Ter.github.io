@@ -71,7 +71,27 @@ su
 
 ### Vim 操作
 
+`sudo apt-get install vim`
+
 **`.vimrc`配置文件**
+
+* `vim ~/.vimrc` open the config file
+* install Vundle and use it to install plugs you'd like to use.
+    * `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+    * edit your .vimrc file and put your plug installation statement between `call vundle#begin()` and `call vundle#end()`. Just do it as follows:
+        ```vim
+        call vundle#begin()
+        " default installation
+        Plugin 'VundleVim/Vundle.vim'
+        " install doxygen for better comments, usage like, :Dox, :DoxAuthor
+        Plugin 'vim-scripts/DoxygenToolkit.vim'
+        " install Chinese vim document, usage like, :help
+        Plugin 'asins/vimcdoc'
+        call vundle#end()
+        ```
+        then, save the file and use `:PluginInstall` to start installation.
+
+> https://vimcdoc.sourceforge.net/
 
 **安装插件**
 
