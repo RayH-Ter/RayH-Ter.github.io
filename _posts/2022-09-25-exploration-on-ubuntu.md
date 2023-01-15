@@ -27,6 +27,13 @@ sudo passwd update
 su
 ```
 
+**添加代理**
+
+1. 在主机cmd获取当前IPv4地址（一般以192开头），记作yourip
+2. 查看代理窗口（如Clash客户端界面），记作yourport
+3. 进入WSL Ubuntu，执行`export ALL_PROXY="http://yourip:yourport"`
+4. 当主机ip发生变化时需重新设置
+
 **换源**
 
 需要保证源的正确性：
@@ -97,4 +104,4 @@ su
 
 ### Jekyll + Github
 
-参考[Design Homepage](https://rayh-ter.github.io/2022/09/26/design-homepage)
+> 参考[Design Homepage](https://rayh-ter.github.io/2022/09/26/design-homepage)
