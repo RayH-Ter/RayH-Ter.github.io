@@ -56,13 +56,13 @@ su
 
 **设置用户信息**
 
-* `git config --global user.name ""`
-* `git config --global user.email ""`
+`git config --global user.name ""` \
+`git config --global user.email ""`
 
 **查看用户信息**
 
-* `git config user.name`
-* `git config user.email`
+`git config user.name`\
+`git config user.email`
 
 **设置记住密码**
 
@@ -70,11 +70,11 @@ su
 
 **常见操作**
 
-* `git clone xxx`
-* `git add/reset xxx`
-* `git commit -m ""`
-* `git push`
-* `git config --global --unset http.proxy`
+`git clone xxx` \
+`git add/reset xxx` \
+`git commit -m ""` \
+`git push` \
+`git config --global --unset http.proxy`
 
 ### Vim 操作
 
@@ -82,10 +82,10 @@ su
 
 **`.vimrc`配置文件**
 
-* `vim ~/.vimrc` open the config file
-* install Vundle and use it to install plugs you'd like to use.
-    * `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-    * edit your .vimrc file and put your plug installation statement between `call vundle#begin()` and `call vundle#end()`. Just do it as follows:
+1. `vim ~/.vimrc` open the config file
+2. install Vundle and use it to install plugs you'd like to use.
+    1. `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+    2. edit your .vimrc file and put your plug installation statement between `call vundle#begin()` and `call vundle#end()`. Just do it as follows:
         ```vim
         call vundle#begin()
         " default installation
