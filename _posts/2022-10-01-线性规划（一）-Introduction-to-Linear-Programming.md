@@ -19,13 +19,13 @@ $$
 \min f\left(\vec{\mathbf{x}}\right) \\
 s.t.\ 
 \begin{equation*}
-	\begin{cases}
-		G_1\left(\vec{\mathbf{x}}\right) & \ge 0 \\
-		G_2\left(\vec{\mathbf{x}}\right) & \ge 0 \\
-		\quad \vdots & \vdots \\
-		G_n\left(\vec{\mathbf{x}}\right) & \ge 0 \\
-		x_1, \cdots, x_n &\ge 0
-	\end{cases}
+    \begin{cases}
+        G_1\left(\vec{\mathbf{x}}\right) & \ge 0 \\
+        G_2\left(\vec{\mathbf{x}}\right) & \ge 0 \\
+        \quad \vdots & \vdots \\
+        G_n\left(\vec{\mathbf{x}}\right) & \ge 0 \\
+        x_1, \cdots, x_n &\ge 0
+    \end{cases}
 \end{equation*}
 $$
 
@@ -40,13 +40,13 @@ $f\left(\cdot\right)\ \ G_i\left(\cdot\right)$ is a linear function.
 **Standard Form**
 
 $$
-	\min \mathbf{c}^{T}\mathbf{x} \\
-	s.t.\ 
-	\begin{array}{rl}
-		\mathbf{A}\mathbf{x} &= \mathbf{b}\\
-		\mathbf{x} &\ge 0
-	\end{array}\\
-	feasible\ domain: P=\left\{x\in R^n\mid\mathbf{A}\mathbf{x} = \mathbf{b},\ x\ge0 \right\}
+    \min \mathbf{c}^{T}\mathbf{x} \\
+    s.t.\ 
+    \begin{array}{rl}
+        \mathbf{A}\mathbf{x} &= \mathbf{b}\\
+        \mathbf{x} &\ge 0
+    \end{array}\\
+    feasible\ domain: P=\left\{x\in R^n\mid\mathbf{A}\mathbf{x} = \mathbf{b},\ x\ge0 \right\}
 $$
 
 $\mathbf{A}$是$m\times n$的矩阵，$c$和$x$是n维列向量，$b$是m维列向量。A称为约束矩阵，b称为右手边向量，c称为成本向量。假定b中每一元素均为非负数。
@@ -54,27 +54,27 @@ $\mathbf{A}$是$m\times n$的矩阵，$c$和$x$是n维列向量，$b$是m维列�
 **Converting to Standard Form**
 
 1. 无约束变量
-   
-	$$
-   		x = x^{+} - x^{-},\ \left|x\right| = x^{+} + x^{-} \\
-   		\begin{equation}
-   			x^{+} = \left\{
-   			\begin{array}{cc}
-   				x, & x > 0 \\
-   				0, & x \leq 0
-   			\end{array}\right.
-   			,\quad 
-   		x^{-} = \left\{
-   		\begin{array}{cc}
-   			0, & x > 0 \\
-   			-x, & x \leq 0
-   		\end{array}\right.
-   		\end{equation}
-   		\\
-   		即\ \ x^{+} \ge 0,\ x^{-} \ge 0,\ x^{+} \times x^{-} = 0
-	$$
-	
-	注意：$\ x^{+} \times x^{-} = 0$是一个二次约束
+
+   $$
+       x = x^{+} - x^{-},\ \left|x\right| = x^{+} + x^{-} \\
+       \begin{equation}
+           x^{+} = \left\{
+           \begin{array}{cc}
+               x, & x > 0 \\
+               0, & x \leq 0
+           \end{array}\right.
+           ,\quad 
+       x^{-} = \left\{
+       \begin{array}{cc}
+           0, & x > 0 \\
+           -x, & x \leq 0
+       \end{array}\right.
+       \end{equation}
+       \\
+       即\ \ x^{+} \ge 0,\ x^{-} \ge 0,\ x^{+} \times x^{-} = 0
+   $$
+
+   注意：$\ x^{+} \times x^{-} = 0$是一个二次约束
 
 2. 不等式转换为等式
 
@@ -82,3 +82,5 @@ $\mathbf{A}$是$m\times n$的矩阵，$c$和$x$是n维列向量，$b$是m维列�
    2. 对于$G_j\left(x\right) \ge b_j$可以通过添加变量$s_j \ge 0$构成$G_j\left(x\right)-s_j=b_j$
 
 3. 极大极小转换（取负号）
+
+**疑问：如果没有等号，只有小于或大于号呢**应该和2转换相同，之不多对应变量的等号也去掉。
