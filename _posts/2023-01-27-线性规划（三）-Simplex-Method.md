@@ -21,7 +21,7 @@ Phase II:
 2. 第二步：**判断是否最优**（关键），是则停止
 3. 第三步：前往下一个**更优**点（关键）
 
-<img src="{{ site.baseurl }}/assets/images/LP/3_0.png" alt="3_0" style="zoom:50%;" />
+<img src="{{ site.baseurl }}/assets/images/LP/3_0.png" alt="3_0" style="zoom:33%;" />
 
 该算法迭代最终一定会停止，因为极点的个数不超过$C\left(n,m\right)$，只要不重复，算法一定会停止。
 
