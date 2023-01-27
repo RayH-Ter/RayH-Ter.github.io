@@ -3,6 +3,14 @@
 
 platforms:
   -
+    type: Weibo
+    icon: "fab fa-weibo"
+    link: "http://service.weibo.com/share/share.php?title=TITLE&url=URL"
+  -
+    type: Weixin
+    icon: "fab fa-weixin"
+    link: "https://wx.qq.com/"
+  -
     type: Twitter
     icon: "fab fa-twitter"
     link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
@@ -21,7 +29,4 @@ platforms:
   #   icon: "fab fa-linkedin"
   #   link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
   #
-  # -
-  #   type: Weibo
-  #   icon: "fab fa-weibo"
-  #   link: "http://service.weibo.com/share/share.php?title=TITLE&url=URL"
+
