@@ -8,8 +8,6 @@ tags:
 - Linear Programming
 - Simplex Method
 ---
-# Simplex Method
-
 ## 前言
 
 <p align="right">——迭代，最好的时代，也是最坏的时代</p>
