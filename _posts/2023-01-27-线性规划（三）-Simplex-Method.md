@@ -231,6 +231,7 @@ $$\mathbf{d}_q=\left[\begin{array}{c}
 **定理**：若$\mathbf{x}$是关于$\mathbf{B}$的basic feasible solution，且对于某一nonbasic variable $x_q$有$r_q>0$，则$\mathbf{d}_q=\left[\begin{array}{c}
 -\mathbf{B}^{-1}\mathbf{A}_q \\ e_q
 \end{array}\right]\in\mathbf{R}^n$指向更优目标值。
+
 <img src="{{ site.baseurl }}/assets/images/LP/3_2.png" alt="3_2" style="zoom: 33%;" />
 
 在采用单纯形法时不必强求找到最小的reduced cost，因为无法预知下一步后可找到的最优reduced cost和另一条路相比哪个更好（即贪心算法不一定都好）。
@@ -307,6 +308,7 @@ $$
 **推论2**：若$\mathbf{x}$是最优basic feasible solution且部分reduced cost为0（$r_{q1},r_{q2},\cdots,r_{qk}=0$），则可行域$\mathbf{P}$内满足$\mathbf{y}=\mathbf{x}+\sum_{i=1}^{k}y_{qi}d_{qi}$的点$\mathbf{y}$也是最优解。
 
 在nondegenracy的情况下，若basic feasible solution $\mathbf{x}$是最优解，则对于任一nonbasic variable $x_q$都有$r_q\ge0$。在degenracy的情况下则不一定成立。
+
 <img src="{{ site.baseurl }}/assets/images/LP/3_3.png" alt="3_3" style="zoom: 33%;" />
 
 ### How far is my good neighbor?
