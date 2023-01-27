@@ -1,182 +1,71 @@
+---
+layout: compress
+# Default layout
+---
+
 <!DOCTYPE html>
-<html lang="en-us">
 
-{% include head.html %}
+{% include assets-origin.html %}
 
-<body>
+{% capture prefer_mode %}
+  {% if site.theme_mode %}
+    data-mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
 
-<section class="hero is-dark">
-  <div class="hero-body">
-    <div class="container">
-        <h1 class="title">
-          <span class="typewrite" data-period="2000" data-type='[ "Welcome", "你好", "世界因何不同", "欣于所遇，暂得于己"]'>
-            <span class="wrap"></span>
-          </span>
-        </h1>
-      <h4 class="subtitle" id="quote">
-      </h4>
-    </div>
-  </div>
-</section>
+<!-- `site.alt_lang` can specify a language different from the UI -->
+<html lang="{{ site.alt_lang | default: site.lang }}"{{ prefer_mode }}>
 
-<div class="main-container">
-  <div class="tile is-ancestor is-vertical">
+  {% include head.html %}
 
+  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
 
-    <nav class="nav has-shadow">
+    {% include sidebar.html %}
 
-      <div class="nav-left">
+    {% include topbar.html %}
 
-        <a href="{{"/" | relative_url}}" class="nav-item">
-          <span class="icon">
-            <i class="fa fa-home" aria-hidden="true" title="Homepage"></i>
-          </span>
-        </a>
-
-        <a href="https://github.com/RayH-Ter" class="nav-item">
-          <span class="icon">
-            <i class="fa fa-github" aria-hidden="true" title="Github"></i>
-          </span>
-        </a>
-
-        <div class="nav-item" id="searchFieldNav">
-          <div class="field has-addons">
-            <p class="control">
-              <input class="input is-small" type="text" placeholder="Find an article" id="search-text">
-            </p>
-            <p class="control">
-              <a class="button is-dark is-small" onclick="searchHandler();">
-                Search
-              </a>
-            </p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="nav-right nav-menu" id='nav-menu'>
-        <a href="{{ "/archive" | relative_url }}" class="nav-item">Archive</a>
-        <a href="{{ "/tags" | relative_url }}" class="nav-item">Tags</a>
-        <a href="{{ "/categories" | relative_url }}" class="nav-item">Categories</a>
-      </div>
-
-      <span class="nav-toggle" id="nav-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-    </nav>
-
-    <div class="tile is-parent">
-      <div class="tile is-8 is-child main">
-
+    <div id="main-wrapper" class="d-flex justify-content-center">
+      <div id="main" class="container pl-xl-4 pr-xl-4">
         {{ content }}
-
       </div>
 
-      <div class="tile is-4 is-child">
-        <div class="tile is-parent is-vertical sidebar">
+      {% include search-results.html %}
 
-          <div class="tile is-child widget">
+    </div> <!-- #main-wrapper -->
 
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title nice-title">
-                  Hello, this is RayH-Ter!
-                </p>
-              </header>
-              <div class="card-content">
-                <div class="content nice-text">
-                  <center><img src="{{ site.baseurl }}/assets/images/moon.png" style="zoom:50%;"/> </center>
-                </div>
-              </div>
-            </div>
+    {% include footer.html %}
 
-          </div>
+    {% if page.mermaid %}
+      {% include mermaid.html %}
+    {% endif %}
 
-          <div class="tile is-child widget">            
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title nice-title">
-                  Recent Posts
-                </p>
-              </header>
-              <div class="card-content">
-                <div class="content nice-text">
-                  <ul>
-                  {% for post in site.posts limit:3 %}
-                  <li><a href="{{ post.url | relative_url }}">
-                    {{ post.title }}
-                  </a></li>
-                  {% endfor %}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div id="mask"></div>
 
-          <div class="tile is-child widget">
-            <div class="card">
-              <header class="card-header">
-                <p class="card-header-title nice-title">
-                  Recommended Websites
-                </p>
-              </header>
-              <div class="card-content">
-                <div class="content nice-text">
-                  <ul>
-                    <li>
-                      <a href="https://github.com/RayH-Ter">RayH-Ter</a>
-                    </li>
-                    <li>
-                      <a href="https://zjushine.cn">ZJUshine</a>
-                    </li>
-                    <li>
-                      <a href="https://jekyllrb.com/">Jekyll</a>
-                    </li>
-                    <li>
-                      <a href="https://ctan.org/">CTAN</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
 
+    {% if site.pwa.enabled %}
+      <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+        data-animation="true" data-autohide="false">
+        <div class="toast-header">
+          <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-
+        <div class="toast-body text-center pt-0">
+          <p class="pl-2 pr-2 mb-3">{{ site.data.locales[site.lang].notification.update_found }}</p>
+          <button type="button" class="btn btn-primary" aria-label="Update">
+            {{ site.data.locales[site.lang].notification.update }}
+          </button>
+        </div>
       </div>
+    {% endif %}
 
-    </div>
+    {% include search-loader.html %}
 
-  </div>
-</div>
+    {% include js-selector.html %}
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        Some rights reserved.
-      </p>
-      <p>
-        Made with <i class="fa fa-heart"></i> and <a href="https://github.com/jgthms/bulma">Bulma</a>, <a href="https://jekyllrb.com/">Jekyll</a>. Hosted on <a href="https://github.com/">Github</a>
-      </p>
-      <p>
-        <a class="icon" href="https://github.com/RayH-Ter">
-          <i class="fa fa-github" title="Github"></i>
-        </a>
-        <a class="icon" href="mailto:2963165392@qq.com">
-          <i class="fa fa-envelope" title="Email"></i>
-        </a>
-        <a class="icon" href="https://mp.weixin.qq.com/">
-          <i class="fa fa-wechat" title="Wechat"></i>
-        </a>
-      </p>
-    </div>
-  </div>
-</footer>
+  </body>
 
-<!-- js -->
-<script src="{{ site.baseurl }}/assets/js/custom.js"></script>
-<script src="{{ site.baseurl }}/assets/js/typewriter.js"></script>
-</body>
 </html>

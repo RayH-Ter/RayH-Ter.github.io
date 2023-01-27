@@ -1,6 +1,21 @@
-*.gem
-.bundle
-.sass-cache
+# hidden files
+.*
+!.git*
+!.editorconfig
+!.nojekyll
+!.husky
+!.commitlintrc.json
+!.versionrc.json
+!.stylelintrc.json
+
+# bundler cache
 _site
+vendor
 Gemfile.lock
-.DS_Store
+
+# rubygem
+*.gem
+
+# npm dependencies
+node_modules
+package-lock.json
