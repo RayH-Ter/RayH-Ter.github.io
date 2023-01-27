@@ -79,6 +79,7 @@ $$
    如果每一个bfs均为非退化，则该线性规划问题也是非退化的。
 
 2. 如果一个basic feasible solution是非退化的，则$\mathbf{x}$由n个超平面唯一决定（n-m个变量等于0以及m个等式约束）。
+
    $$
    \mathbf{A}=\left[\mathbf{B}\mid \mathbf{N}\right],\ 
    \mathbf{x} = 
@@ -144,6 +145,7 @@ $$
    	\end{array}
    \right]
    $$
+   
    $\mathbf{M}^{-1}$或者$\mathbf{M}$被称为线性规划问题的基本矩阵（fundamental matrix）
 
 3. 如果一个basic feasible solution是退化的，则$\mathbf{x}$是由超过n个超平面over-determined。
@@ -189,12 +191,17 @@ $$
 	\end{array}
 \right]
 $$
-刚好$\left[\begin{array}{c}
+刚好
+$$\left[\begin{array}{c}
 		-\mathbf{B}^{-1}\mathbf{N} \\
 		\mathbf{I}
-	\end{array}\right]$为$n\times(n-m)$维度，是否$\mathbf{d}_q$可以从该矩阵的$n-m$列中求得，其中$\mathbf{N=[A_{q1},A_{q2},\cdots,A_{q(n-m)}]}$，故先假设$\mathbf{d}_q=\left[\begin{array}{c}
+	\end{array}\right]$$
+为$n\times(n-m)$维度，是否$ \mathbf{d}\_q $
+可以从该矩阵的$n-m$列中求得，其中$\mathbf{N=[A_{q1},A_{q2},\cdots,A_{q(n-m)}]}$，故先假设
+
+$$\mathbf{d}_q=\left[\begin{array}{c}
 -\mathbf{B}^{-1}\mathbf{A}_q \\ 0 \\ \vdots \\ 1\\ \vdots \\ 0 \\
-\end{array}\right]$。
+\end{array}\right]$$。
 
 所以$x_1 = x_0 +\lambda \mathbf{d}_q=[\begin{array}{c}\mathbf{x_B} \\ \mathbf{x_N}\end{array}]+\lambda \left[\begin{array}{c}
 -\mathbf{B}^{-1}\mathbf{A}_q \\ e_q
@@ -205,9 +212,13 @@ $$
 1. 在nondegeneracy情况下，$\mathbf{x_B}>0$，所以对于足够小的$\lambda$，$x_1\ge0$，所以此时$\mathbf{d}_q$是feasible edge direction。
 2. 在degeneracy情况下，$\mathbf{x_B}$中存在变量等于0，若$\mathbf{d}_q$中对应的元素为负数，因$\lambda>0$，故$x_1$不满足$x_1\ge0$，此时该$\mathbf{d}_q$不是feasible edge direction。
 
-因此，从上述推理过程可得出结论，在nondegeneracy情况下，可以选取$\mathbf{d}_q=\left[\begin{array}{c}
+因此，从上述推理过程可得出结论，在nondegeneracy情况下，可以选取
+
+$$\mathbf{d}_q=\left[\begin{array}{c}
 -\mathbf{B}^{-1}\mathbf{A}_q \\ 0 \\ \vdots \\ 1\\ \vdots \\ 0 \\
-\end{array}\right]$作为edge direction来从当前极点转移至邻居极点。
+\end{array}\right]$$
+
+作为edge direction来从当前极点转移至邻居极点。
 
 ### Which neighbor is a good one?
 
@@ -226,9 +237,10 @@ $$
 
 **定理**：给定关于$\mathbf{B}$的basic feasible solution $\mathbf{x}$，若对于任一nonbasic varible $x_q$都有$r_q\ge0$，则$\mathbf{x}$是最优解。
 
-**证明**：$\forall \mathbf{y}\in P, \mathbf{y}=\left(\begin{array}{c}\mathbf{y}_B\\\mathbf{y}_N\end{array}\right)\ge 0, \mathbf{Ay=b}$，而$\mathbf{x}_{N}^{0}=0, \mathbf{A}\mathbf{x}^0=\mathbf{b}$
+**证明**：$$\forall \mathbf{y}\in P, \mathbf{y}=\left(\begin{array}{c}\mathbf{y}_B\\\mathbf{y}_N\end{array}\right)\ge 0, \mathbf{Ay=b}$$，而$\mathbf{x}_{N}^{0}=0, \mathbf{A}\mathbf{x}^0=\mathbf{b}$
+
 $$
-\mathbf{M}\left(\mathbf{y}-\mathbf{x}^0\right) &=& 
+\mathbf{M}\left(\mathbf{y}-\mathbf{x}^0\right) =
 \left[
 	\begin{array}{cc}
 		\mathbf{B} & \mathbf{N} \\
@@ -241,16 +253,16 @@ $$
 		\mathbf{y}_N
 	\end{array}
 \right]\\
- &=&  \left[
+ =  \left[
 	\begin{array}{c}
 		0  \\
 		\mathbf{y}_N
 	\end{array}
-\right]\\
+\right]
 $$
 
 $$
-\mathbf{y}-\mathbf{x}^0 &=& \mathbf{M}^{-1}
+\mathbf{y}-\mathbf{x}^0 = \mathbf{M}^{-1}
 \left[
 	\begin{array}{c}
 		0  \\
@@ -270,7 +282,7 @@ $$
 		\mathbf{y}_N
 	\end{array}
 \right]\\
-&=&
+=
 \left[
 	\begin{array}{c}
 		-\mathbf{B}^{-1}\mathbf{N} \mathbf{y}_N \\
@@ -303,8 +315,8 @@ $$
 
 对于$\mathbf{x}\left(\alpha\right)=\mathbf{x}+\alpha \mathbf{d}_q,\alpha>0$且$r_q = \mathbf{c}^T\mathbf{d}_q<0$
 
-1. 针对$\mathbf{d}_q\ge0$，$\mathbf{x}\left(\alpha\right)\ge 0, \forall\alpha\ge0$，故$\mathbf{x}\left(\alpha\right)\in P, \forall\alpha>0$，同时随着$\alpha\rightarrow-\infin$，$\mathbf{c}^{T}\mathbf{x}\left(\alpha\right)=\mathbf{c}^{T}\mathbf{x}+\alpha\mathbf{c}^{T}\mathbf{d}_q\rightarrow -\infin$。
-2. 针对$\mathbf{d}_q$中至少有一个元素小于0，有$\alpha=\min{\frac{x_i}{-d_{qi}}}>0,d_{qi}<0$，正好完成一个pivoting，$\min{\frac{x_i}{-d_i}}$被称为minimum ratio test。若有多个（两个及以上）basic variables同时变为0，则说明degenerate。
+1. 针对$\mathbf{d}_q\ge0$，$\mathbf{x}\left(\alpha\right)\ge 0, \forall\alpha\ge0$，故$\mathbf{x}\left(\alpha\right)\in P, \forall\alpha>0$，同时随着$\alpha\rightarrow-\infty$，$\mathbf{c}^{T}\mathbf{x}\left(\alpha\right)=\mathbf{c}^{T}\mathbf{x}+\alpha\mathbf{c}^{T}\mathbf{d}_q\rightarrow -\infty$。
+2. 针对$\mathbf{d}\_q$中至少有一个元素小于0，有$\alpha=\min{\frac{x_i}{-d_{qi}}}>0,d_{qi}<0$，正好完成一个pivoting，$\min{\frac{x_i}{-d_i}}$被称为minimum ratio test。若有多个（两个及以上）basic variables同时变为0，则说明degenerate。
 3. 若为degenerate情况，则对于$d_{qi}<0$，$x_i$可能为0，此时$\alpha=0$，**stuck!** trapped into a loop。
 
 至此，我们已经知道了如何判断当前极点是否最优，以及非最优时如何前往下一个极点。所以我们可以完善单纯形法的步骤：
