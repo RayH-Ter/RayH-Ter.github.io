@@ -222,13 +222,13 @@ $$\mathbf{d}_q=\left[\begin{array}{c}
 
 记$\mathbf{x}=\mathbf{x}+\lambda \mathbf{d}_q$、$z\left(\mathbf{x}\left(\lambda\right)\right)=\mathbf{c}^T \mathbf{x}\left(\lambda\right)=\mathbf{c}^T \mathbf{x}+\mathbf{c}^T \mathbf{d}_q$，故我们需要$\mathbf{c}^T\mathbf{d}_q\le 0$，代入计算即可得到符合要求的$\mathbf{d}_q$。下图中$r_d$称为reduced cost。
 
-<img src="{{ site.baseurl }}/assets/images/LP/3_1.png" alt="3_1" style="zoom:50%;" />
+<img src="/assets/images/LP/3_1.png" alt="3_1" style="zoom:50%;" />
 
 **定理**：若$\mathbf{x}$是关于$\mathbf{B}$的basic feasible solution，且对于某一nonbasic variable $x_q$有$r_q>0$，则$\mathbf{d}_q=\left[\begin{array}{c}
 -\mathbf{B}^{-1}\mathbf{A}_q \\ e_q
 \end{array}\right]\in\mathbf{R}^n$指向更优目标值。
 
-<img src="{{ site.baseurl }}/assets/images/LP/3_2.png" alt="3_2" style="zoom: 33%;" />
+<img src="/assets/images/LP/3_2.png" alt="3_2" style="zoom: 33%;" />
 
 在采用单纯形法时不必强求找到最小的reduced cost，因为无法预知下一步后可找到的最优reduced cost和另一条路相比哪个更好（即贪心算法不一定都好）。
 
@@ -305,7 +305,7 @@ $$
 
 在nondegenracy的情况下，若basic feasible solution $\mathbf{x}$是最优解，则对于任一nonbasic variable $x_q$都有$r_q\ge0$。在degenracy的情况下则不一定成立。
 
-<img src="{{ site.baseurl }}/assets/images/LP/3_3.png" alt="3_3" style="zoom: 33%;" />
+<img src="assets/images/LP/3_3.png" alt="3_3" style="zoom: 33%;" />
 
 ### How far is my good neighbor?
 
@@ -319,7 +319,7 @@ $$
 
 至此，我们已经知道了如何判断当前极点是否最优，以及非最优时如何前往下一个极点。所以我们可以完善单纯形法的步骤：
 
-<img src="{{ site.baseurl }}/assets/images/LP/3_4.png" alt="3_4" style="zoom: 50%;" />
+<img src="/assets/images/LP/3_4.png" alt="3_4" style="zoom: 50%;" />
 
 ### How to start the simplex method?
 
@@ -337,7 +337,7 @@ $$
 
 2. 添加m（等式约束的个数）个变量构造**阶段1问题**（Phase I problem，PhI），如下：
 
-   <img src="{{ site.baseurl }}/assets/images/LP/3_5.png" alt="3_5" style="zoom:33%;" />
+   <img src="/assets/images/LP/3_5.png" alt="3_5" style="zoom:33%;" />
 
 特点：
 
@@ -359,7 +359,7 @@ $$
 
 5. 在degenerate情况下
 
-   <img src="{{ site.baseurl }}/assets/images/LP/3_6.png" alt="3_6" style="zoom:50%;" />
+   <img src="/assets/images/LP/3_6.png" alt="3_6" style="zoom:50%;" />
 
    若在标准化线性规划问题时处理了redundant case，则第二种情况不会发生。
 
@@ -369,7 +369,7 @@ Two-phase Method在寻找原线性规划的一个basic feasible solution时需�
 
 构造如下问题：
 
-<img src="{{ site.baseurl }}/assets/images/LP/3_7.png" alt="3_7" style="zoom:50%;" />
+<img src="/assets/images/LP/3_7.png" alt="3_7" style="zoom:50%;" />
 
 $\mathbf{u}=\mathrm{b},\mathbf{x}=0$是一个初始的basic feasible solution，M是一个很大的数（理论上应该无穷大）。所以该问题有最优解（有限）或趋于负无穷。
 
@@ -385,7 +385,7 @@ $\mathbf{u}=\mathrm{b},\mathbf{x}=0$是一个初始的basic feasible solution，
 
 2. M的取值问题，M应该去多大才算充分大。
 
-   <img src="{{ site.baseurl }}/assets/images/LP/3_8.png" alt="3_8" style="zoom: 33%;" />
+   <img src="/assets/images/LP/3_8.png" alt="3_8" style="zoom: 33%;" />
 
 商业线性规划求解器倾向于使用Two-phase Method。
 
@@ -397,7 +397,7 @@ $\mathbf{u}=\mathrm{b},\mathbf{x}=0$是一个初始的basic feasible solution，
 
 为了解决因**已产生的degenerate而导致的cycling/loop问题**，有图下方法。其中之一是，在出现多个basic variable减少至0时，始终选择下标小的作为nonbasic variable，有序进出以**避免degenerate导致的cycling**。
 
-<img src="{{ site.baseurl }}/assets/images/LP/3_9.png" alt="3_9" style="zoom:33%;" />
+<img src="/assets/images/LP/3_9.png" alt="3_9" style="zoom:33%;" />
 
 用perturbation来避免degenerate，为数值方法，在同时出现多个basic variable减少到0时添加perturbation，来**避免degenerate**。
 

@@ -149,8 +149,8 @@ math: true
    $$
    同时记矩阵$\mathbf{A}$的前$p$列为$\bar{\mathbf{A}}$，然后有$\mathbf{A}\mathbf{x}=\bar{\mathbf{A}}\bar{\mathbf{x}}=\mathbf{b}$。
 
-   <center><img src="{{ site.baseurl }}/assets/images/LP/2_1.png" alt="2_1" style="zoom: 65%;" />
-   <img src="{{ site.baseurl }}/assets/images/LP/2_2.png" alt="2_2" style="zoom: 55%;" /></center>
+   <center><img src="/assets/images/LP/2_1.png" alt="2_1" style="zoom: 65%;" />
+   <img src="/assets/images/LP/2_2.png" alt="2_2" style="zoom: 55%;" /></center>
 
    注：$\mathbf{A}_{m\times n},\ m\le n$若行满秩，并不意味着从$\mathbf{A}$任意选出的$m$列是线性无关的。
    
@@ -211,8 +211,8 @@ math: true
 
       第一种情况，此时$c^{T}\mathbf{d}<0$，$\mathbf{d}$趋于无穷时，目标函数最优值趋于负无穷。
 
-        <img src="{{ site.baseurl }}/assets/images/LP/2_3.png" alt="2_3" style="zoom: 33%;" />
+        <img src="/assets/images/LP/2_3.png" alt="2_3" style="zoom: 33%;" />
 
       第二种情况，$c^{T}\mathbf{d}\ge0$。易证。代入非极点但取到最小值的点，然后用极点的凸组合表示，推出矛盾。
 
-        <img src="{{ site.baseurl }}/assets/images/LP/2_4.png" alt="2_4" style="zoom: 33%;" />
+        <img src="/assets/images/LP/2_4.png" alt="2_4" style="zoom: 33%;" />
