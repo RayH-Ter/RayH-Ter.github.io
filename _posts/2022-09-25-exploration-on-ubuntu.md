@@ -26,7 +26,7 @@ su
 
 **添加代理**
 
-1. 在主机cmd获取当前IPv4地址（一般以192开头），记作yourip
+1. `cat /etc/resolv.conf`查看IP地址，记作yourip
 2. 查看代理窗口（如Clash客户端界面），记作yourport
 3. 进入WSL Ubuntu，执行`export ALL_PROXY="http://yourip:yourport"`
 4. 当主机ip发生变化时需重新设置
@@ -48,6 +48,11 @@ su
 **更改文件/目录权限**
 
 * `chown`命令，详见[wuling129](https://www.cnblogs.com/wuling129/p/4648760.html)
+
+**wsl与windows文件相互访问**
+
+* wsl访问windows文件：`/mnt/`目录下即为windows磁盘
+* windows访问wsl文件：文件管理器左侧显示的`Linux`即为wsl
 
 ### Git 操作
 
