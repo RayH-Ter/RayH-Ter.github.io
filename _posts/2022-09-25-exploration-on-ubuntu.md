@@ -77,6 +77,7 @@ su
 `git commit -m ""` \
 `git push` \
 `git config --global --unset http.proxy`
+`git config --global --unset https.proxy`
 
 ### Vim 操作
 
